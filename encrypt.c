@@ -1,22 +1,10 @@
 #include <stdio.h>
-
 #include <string.h>
-
 #include <stdlib.h>
-
-
-
-
 char* encryptDecrypt(char* name, char key, int size)
-
 {
-
-	char* ename = malloc(size + 1);
-
-
-
-
-	ename[size] = '\0';
+char* ename = malloc(size + 1);
+ename[size] = '\0';
 
 	int i;
 
@@ -28,53 +16,32 @@ char* encryptDecrypt(char* name, char key, int size)
 
 	}
 
-
-
-
-	return ename;
+return ename;
 
 }
-
-
-
-
 int main()
 
 {
-
-	char key;
+char key;
 
 	printf("Please enter a key: ");
 
 	key = getchar();
 
-
-
-
-	char* name = "hassanmahmood";
+char* name = "hassanmahmood";
 
 	char* ename = encryptDecrypt(name, key, 13);
 
 	char* dname = encryptDecrypt(ename, key, 13);
 
+printf("Raw string : %s\n", name);
 
 
-
-	printf("Raw string : %s\n", name);
-
+printf("Encrypted : %s\n", ename);
 
 
+printf("Decrypted : %s\n", dname);
 
-	printf("Encrypted : %s\n", ename);
-
-
-
-
-	printf("Decrypted : %s\n", dname);
-
-
-
-
-	return 0;
+return 0;
 
 }
