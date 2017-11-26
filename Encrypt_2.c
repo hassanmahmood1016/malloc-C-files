@@ -6,7 +6,7 @@
 char* encryptDecrypt(char* name, int size)
 {
     char* ename = malloc(size + 1);
-    char key[2] = "SM";
+    char key[2] = "hm";
     ename[size] = '\0';
     int i;
     for (i = 0; i < size; i++)
